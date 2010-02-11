@@ -22,12 +22,17 @@ class plTheme extends sfPluginConfiguration
    */
   public function initialize()
   {
-    sfConfig::set('sf_app_template_dir', 
-      sfConfig::get('sf_app_template_dir').DIRECTORY_SEPARATOR.sfConfig::get('app_theme_name'));
+    
+    if (sfConfig::get('app_plTheme_enabled')) {
 
-    sfConfig::set('sf_web_js_dir_name', $this->generateAssetDirName('js'));
-    sfConfig::set('sf_web_css_dir_name', $this->generateAssetDirName('css'));
-    sfConfig::set('sf_web_image_dir_name', $this->generateAssetDirName('image'));
+      sfConfig::set('sf_app_template_dir', 
+        sfConfig::get('sf_app_template_dir').DIRECTORY_SEPARATOR.sfConfig::get('app_plTheme_theme'));
+
+      sfConfig::set('sf_web_js_dir_name', $this->generateAssetDirName('js'));
+      sfConfig::set('sf_web_css_dir_name', $this->generateAssetDirName('css'));
+      sfConfig::set('sf_web_image_dir_name', $this->generateAssetDirName('image'));
+    }
+
   }
   
   /**
