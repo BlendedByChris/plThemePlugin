@@ -15,7 +15,7 @@
  * @package default
  * @author Chris LeBlanc <chris@webPragmatist.com>
  */
-class plTheme extends sfPluginConfiguration
+class plThemePluginConfiguration extends sfPluginConfiguration
 {
   /**
    * @see sfPluginConfiguration
