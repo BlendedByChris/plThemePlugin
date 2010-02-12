@@ -22,7 +22,9 @@ To install the plugin just use the following in your /plugins directory:
 Example (plugin based theme)
 -------
 ### 1. Install the theme plugin
-To install the theme plugin just use the following in your /plugins directory:
+To install the theme plugin just use the following in your /plugins directory
+(note this is just a sample, it is not a real repo, I don't really want to
+litter github with such simple things):
     git clone git://github.com/webPragmatist/plThemeSamplePlugin.git
 
 ### 2. Configure your app.yml 
