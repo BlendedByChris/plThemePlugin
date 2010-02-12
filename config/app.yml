@@ -3,4 +3,4 @@ all:
   plTheme:
     enabled: true
     theme: default
-    assetPath: theme/%theme%/%type%
+    assetPath: %theme%/%type%
