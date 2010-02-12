@@ -49,7 +49,7 @@ Example (custom themes in web/themes)
         |-- _partial.php
         `-- layout.php
 
-### 3. directory structure for assets
+### 3. Create your directory structure for assets
     web/themes/
     `-- hawtsauce
         |-- css
