@@ -12,7 +12,6 @@ To install the plugin just use the following in your /plugins directory:
 
 
 ### 2. Configure your app.yml (optional)
-#### app.yml 
     # default values
     all:
         plTheme:
@@ -26,31 +25,31 @@ Example (plugin based theme)
 To install the theme plugin just use the following in your /plugins directory:
     git clone git://github.com/webPragmatist/plThemeSamplePlugin.git
 
-#### 2. Configure your app.yml 
+### 2. Configure your app.yml 
     # default values
     all:
         plTheme:
             theme: plThemeSamplePlugin
 
-#### 3. Publish your plugin assets
+### 3. Publish your plugin assets
     ./symfony plugin:publish-assets
 
 Example (custom themes in web/themes)
 -------
-#### 1. Configure your app.yml 
+### 1. Configure your app.yml 
     # default values
     all:
         plTheme:
             theme: hawtsauce
             assetPath: themes/%theme%/%type%
 
-#### 2. Create your directory structure for layout
+### 2. Create your directory structure for layout
     apps/admin/templates/
     `-- hawtsauce
         |-- _partial.php
         `-- layout.php
 
-#### 3. directory structure for assets
+### 3. directory structure for assets
     web/themes/
     `-- hawtsauce
         |-- css
