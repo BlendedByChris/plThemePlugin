@@ -26,7 +26,7 @@ Example (plugin based theme)
 To install the theme plugin just use the following in your /plugins directory:
     git clone git://github.com/webPragmatist/plThemeSamplePlugin.git
 
-### 2. Configure your app.yml 
+#### 2. Configure your app.yml 
     # default values
     all:
         plTheme:
@@ -37,7 +37,7 @@ To install the theme plugin just use the following in your /plugins directory:
 
 Example (custom themes in web/themes)
 -------
-### 1. Configure your app.yml 
+#### 1. Configure your app.yml 
     # default values
     all:
         plTheme:
@@ -50,7 +50,7 @@ Example (custom themes in web/themes)
         |-- _partial.php
         `-- layout.php
 
-#### directory structure for assets
+#### 3. directory structure for assets
     web/themes/
     `-- hawtsauce
         |-- css
