@@ -1,6 +1,6 @@
 # default values
 all:
-  plThemedView:
+  plTheme:
     enabled: true
     theme: default
     assetPath: theme/%theme%/%type%
