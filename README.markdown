@@ -17,7 +17,7 @@ To install the plugin just use the following in your /plugins directory:
         plTheme:
             enabled: true
             theme: default
-            decoratorPath: %plugins%/templates
+            decoratorPath: %plugins%/%theme%/templates
             assetPath: %theme%/%type%
         
 Example (plugin based theme)
