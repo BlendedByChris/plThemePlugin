@@ -17,33 +17,36 @@ To install the plugin just use the following in your /plugins directory:
         plTheme:
             enabled: true
             theme: default
+            decoratorPath: %plugins%/templates
             assetPath: %theme%/%type%
         
 Example (plugin based theme)
 -------
 ### 1. Install the theme plugin
-To install the theme plugin just use the following in your /plugins directory
-(note this is just a sample, it is not a real repo, I don't really want to
-litter github with such simple things):
+To install the theme plugin just use the following in your /plugins directory.
+plTheme uses plugin based decorator templates by default which are stored in
+/plugins/plThemeMyThemePlugin/templates.
     git clone git://github.com/webPragmatist/plThemeSamplePlugin.git
 
 ### 2. Configure your app.yml 
     # default values
     all:
         plTheme:
-            theme: plThemeSamplePlugin
+            theme: plThemeSamplePlugin            
 
 ### 3. Publish your plugin assets
     ./symfony plugin:publish-assets
 
 Example (custom themes in web/themes)
 -------
-### 1. Configure your app.yml 
+### 1. Configure your app.yml
+This configuration uses apps/admin/templates to store decorator templates:
     # default values
     all:
         plTheme:
             theme: hawtsauce
             assetPath: themes/%theme%/%type%
+            decoratorPath: %app%/templates/%theme%
 
 ### 2. Create your directory structure for layout
     apps/admin/templates/

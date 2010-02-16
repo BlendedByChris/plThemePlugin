@@ -3,4 +3,5 @@ all:
   plTheme:
     enabled: true
     theme: default
+    decoratorPath: %plugins%/templates
     assetPath: %theme%/%type%

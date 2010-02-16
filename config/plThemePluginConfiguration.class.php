@@ -21,12 +21,11 @@ class plThemePluginConfiguration extends sfPluginConfiguration
    * @see sfPluginConfiguration
    */
   public function initialize()
-  {
-    
+  { 
     if (sfConfig::get('app_plTheme_enabled')) {
 
       sfConfig::set('sf_app_template_dir', 
-        sfConfig::get('sf_app_template_dir').DIRECTORY_SEPARATOR.sfConfig::get('app_plTheme_theme'));
+        $this->generateDecoratorDirName());
 
       sfConfig::set('sf_web_js_dir_name', $this->generateAssetDirName('js'));
       sfConfig::set('sf_web_css_dir_name', $this->generateAssetDirName('css'));
@@ -48,4 +47,20 @@ class plThemePluginConfiguration extends sfPluginConfiguration
       '%type%' => $type
       ));
   }
+  
+  /**
+   * Builds assetPath provided.
+   *
+   * @param string $type
+   * @return void
+   * @author Chris LeBlanc <chris@webPragmatist.com>
+   */
+  protected function generateDecoratorDirName() {    
+    return strtr(sfConfig::get('app_plTheme_decoratorPath'), array(
+      '%theme%' => sfConfig::get('app_plTheme_theme'),
+      '%plugins%' => sfConfig::get('sf_plugins_dir'),
+      '%app%' => sfConfig::get('sf_app_dir')
+      ));
+  }
+  
 }
